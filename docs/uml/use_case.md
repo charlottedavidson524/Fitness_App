@@ -30,8 +30,11 @@ See `docs/diagrams/use_case_uml.png`
 ### Register Account
 
 Goal: Create a new user profile.
+
 Trigger: User submits registration form.
+
 Success: New account stored in database.
+
 Failure: Username already exists/invalid.
 
 ### Log In

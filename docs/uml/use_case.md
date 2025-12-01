@@ -1,1 +1,1 @@
-![Use Case Diagram](www.plantuml.com/plantuml/png/XOv1oy8m38Rl-nKvVjzX-m4oniP44JmfyrwwC0jf9ccA-EzjRqLHBuM-JvutwOCQqUYfCbPNWIcWLFc1kkxWxuIB2vf-WxLhPFqls75TuC1bCWeQHTWvPGm1qa19Bmxl9Gibd6xp5tMBX3-A1pRqK6TJwsi0JPEFCsGZvINdwBqHXubie6qTMuepTjq7SO-CahtnQaJVf1vvZfwU)
+![Use Case Diagram](../images/use_case.png)

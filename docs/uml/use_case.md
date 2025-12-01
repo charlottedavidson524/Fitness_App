@@ -40,37 +40,51 @@ Failure: Username already exists/invalid.
 ### Log In
 
 Goal: Authenticate the user.
+
 Trigger: User submits login form.
+
 Success: Session token or success response is returned
+
 Failure: Incorrect credentials.
 
 ### Create Fitness Logs
 
 Goal: Add new daily fitness record.
+
 Trigger: User enters workout/health data.
+
 Success: Data saved to SQLite.
+
 Failure: Invalid data or missing fields.
 
 ### View Fitness Logs
 
 Goal: Retrieve previous logs.
+
 Trigger: User navigates to log history.
+
 Success: Logs returned as JSON.
+
 Failure: Database error.
 
 ### Update Fitness Logs
 
 Goal: Modify an existing log.
+
 Success: Update log saved.
+
 Failure: Log not found.
 
 ### Delete Fitness Logs
 
 Goal: Remove a log.
+
 Success: Log deleted.
+
 Failure: Invalid ID or permissions.
 
 ### View Analytics
 
 Goal: Visualise progress over time.
+
 Includes: Weekly/monthly summaries and chart generation.

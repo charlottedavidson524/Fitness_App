@@ -1,21 +1,21 @@
 ```mermaid
 usecaseDiagram
-    actor User
+actor User
 
 
-    User --> (Register Account)
-    User --> (Log In)
+User --> (Register Account)
+User --> (Log In)
 
 
-    User --> (Create Fitness Log)
-    User --> (View Fitness Logs)
-    User --> (Update Fitness Log)
-    User --> (Delete Fitness Log)
+User --> (Create Fitness Log)
+User --> (View Fitness Logs)
+User --> (Update Fitness Log)
+User --> (Delete Fitness Log)
 
 
-    User --> (View Analytics)
+User --> (View Analytics)
 
 
-    (View Analytics) ..> (Calculate Summaries) : include
-    (View Analytics) ..> (Generate Charts) : include
+(View Analytics) ..> (Calculate Summaries) : include
+(View Analytics) ..> (Generate Charts) : include
 ```

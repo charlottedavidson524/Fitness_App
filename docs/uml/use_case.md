@@ -19,4 +19,5 @@
 
     (View Analytics) ..> (Calculate Summaries) : include
     (View Analytics) ..> (Generate Charts) : include
+@enduml
 ```

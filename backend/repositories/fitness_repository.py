@@ -1,0 +1,2 @@
+class FitnessRepository:
+    pass

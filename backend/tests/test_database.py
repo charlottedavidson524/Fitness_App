@@ -18,6 +18,7 @@ def test_database_connection():
     db = Database(TEST_DB_PATH)
     conn = db.get_connection()
     assert isinstance(conn, sqlite3.Connection)
+    conn.close()
     # Check for: correctly stored path, valid sqlite3.Connection instance and no Exception.
 
 # Test that initialisation creates tables.
@@ -34,6 +35,7 @@ def test_create_tables():
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
     # Flatten names into a pyhton list
     tables = [t[0] for t in cursor.fetchall()]
+    conn.close()
 
     assert "users" in tables
     assert "fitness_logs" in tables

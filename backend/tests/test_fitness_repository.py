@@ -30,7 +30,7 @@ def test_get_logs(repos):
     # Create user
     user_id = repos["users"].create_user("a", "b", "c@example.com")
     # Add one log
-    repos["fitness"].create_log["user_id", date.today(), 5000, 3.2, 200]
+    repos["fitness"].create_log(user_id, date.today(), 5000, 3.2, 200)
 
     # Fetch all logs belonging to user
     logs = repos["fitness"].get_logs_by_user(user_id)

@@ -62,6 +62,8 @@ Below are the actual development tasks required to complete the backlog items.
   - `FitnessRepository`
 - Implement database connection manager
 
+**DONE**
+
 ---
 
 ## **Task Group 3: User Registration**

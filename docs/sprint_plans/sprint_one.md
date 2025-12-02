@@ -45,6 +45,8 @@ Below are the actual development tasks required to complete the backlog items.
 - Set up virtual environment & dependencies (`Flask`, `sqlite3`, `pytest`)
 - Create a basic `/health` endpoint for testing
 
+**DONE**
+
 ---
 
 ## **Task Group 2: Database Layer**

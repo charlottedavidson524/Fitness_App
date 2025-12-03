@@ -80,6 +80,8 @@ Below are the actual development tasks required to complete the backlog items.
 - Create `/register` endpoint
 - Validate JSON payload
 
+**DONE**
+
 ---
 
 ## **Task Group 4: User Login**

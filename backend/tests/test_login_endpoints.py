@@ -2,11 +2,16 @@ import pytest
 from backend.app import app
 
 @pytest.fixture
-def client():
-    # Turn on Flask testing mode.
-    # Creates a Flask test client.
-    # Simulates HTTP requests to Flask app in memory without running server.
-    app.config["TESTING"] = True
+def client(tmp_path):
+    # Use a temporary test database
+    test_db_path = tmp_path / "test.db"
+    app.config["DATABASE_PATH"] = str(test_db_path)
+
+    # Re-initialize a clean database for every test
+    from backend.database import Database
+    db = Database(str(test_db_path))
+    db.initialize()
+
     with app.test_client() as client:
         yield client
 

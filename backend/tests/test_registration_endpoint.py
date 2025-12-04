@@ -1,15 +1,22 @@
 import pytest
 from backend.app import app
+from backend.database import Database
 import json
 
 # Test for: missing fields, duplicate user and success case. 
 
 @pytest.fixture
-def client():
-    # Turn on Flask testing mode
+def client(tmp_path):
+    # 1. Create a temporary DB path for this test
+    test_db = tmp_path / "test.db"
+    app.config["DATABASE_PATH"] = str(test_db)
+
+    # 2. Reinitialize DB so it starts empty
+    db = Database(str(test_db))
+    db.initialize()
+
+    # 3. Create test client
     app.config["TESTING"] = True
-    # Creates a Flask test client.
-    # Simulates HTTP requests to Flask app in memory without running a server.
     with app.test_client() as client:
         yield client
 
@@ -43,9 +50,9 @@ def test_duplicate_user(client):
 # Success case
 def test_registration_success(client):
     response = client.post("/register", json = {
-        "username": "bob", 
+        "username": "james", 
         "password": "mypassword",
-        "email": "bob@example.com"
+        "email": "james@example.com"
     })
 
     assert response.status_code == 201
